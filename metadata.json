@@ -1,0 +1,9 @@
+
+{
+  "name": "Green Lab School App",
+  "description": "A school environmental project app for tracking garden, compost, and water usage observations in Telugu.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,28 @@
+
+GOOGLE SHEETS DATABASE SCHEMA (No-Code Config)
+-----------------------------------------------
+
+Sheet Name: "Observations"
+
+| Column Name            | Data Type   | No-Code Control Type | Example Data                       |
+|------------------------|-------------|----------------------|-----------------------------------|
+| Observation_ID         | Text        | UUID/Row ID          | 1712345678                        |
+| Timestamp              | DateTime    | Auto-Entry           | 2023-10-25 09:30:00               |
+| Class                  | Number      | Dropdown (6,7,8,9,10)| 8                                 |
+| Student_Name           | Text        | Text Input           | Ravi Kumar                        |
+| Form_Type              | Text        | Choice               | SEE, CHANGE, THOUGHT              |
+| Photo                  | Image/URL   | Camera/Image Picker  | https://storage.google.com/img.jpg|
+| Description            | Long Text   | Text/Voice Input     | చూశాను, మొక్క చాలా ఎత్తు పెరిగింది. |
+| Status_Change          | Text        | Emoji Choice         | 🌱 బాగుంది                         |
+| Student_Thought        | Long Text   | Text/Voice Input     | ఎందుకంటే మనం రోజు నీళ్లు పోస్తున్నాం.|
+
+WORKFLOW ACTIONS:
+1. Submission Action: Notify Teacher via Email/Push when Class > 0.
+2. Image Storage: Connected to Cloudinary or Google Drive (Standard for Glide/AppSheet).
+3. Offline Logic: Enabled in Builder settings (Offline data storage on local cache).
+4. Reporting: Pivot Table in Google Sheets for "Count of Observations per Class per Month".
+
+PERMISSIONS REQUIRED:
+- camera: To capture site photos.
+- microphone: To allow students to record thoughts (Voice-to-Text).
+- storage: To cache offline submissions.
